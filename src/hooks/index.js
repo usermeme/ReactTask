@@ -1,3 +1,3 @@
-export { useSelector } from 'react-redux';
-
+export { useTranslation } from 'react-i18next';
+export { useSelector, useDispatch } from 'react-redux';
 export { default as useChangeTheme } from './useChangeTheme';
