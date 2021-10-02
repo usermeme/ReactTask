@@ -1,11 +1,11 @@
-import { Suspense, lazy } from 'react';
+import * as React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { AppProvider, ThemeProvider } from './providers';
 import Layout from './layout';
 
-const PublicRoutes = lazy(() => import('pages/public'));
-const PrivateRoutes = lazy(() => import('pages/private'));
+const PublicRoutes = React.lazy(() => import('pages/public'));
+const PrivateRoutes = React.lazy(() => import('pages/private'));
 
 const App = ({ store }) => (
   <Provider store={store}>
@@ -18,9 +18,9 @@ const App = ({ store }) => (
                 <PrivateRoutes />
               </Layout>
             ) : (
-              <Suspense fallback={null}>
+              <React.Suspense fallback={null}>
                 <PublicRoutes />
-              </Suspense>
+              </React.Suspense>
             )
           }
         </AppProvider>
