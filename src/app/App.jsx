@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { AppProvider, ThemeProvider } from './providers';
-import Layout from './layout';
+import { PublicLayout, PrivateLayout } from './layouts';
 
 const PublicRoutes = React.lazy(() => import('pages/public'));
 const PrivateRoutes = React.lazy(() => import('pages/private'));
@@ -14,13 +14,13 @@ const App = ({ store }) => (
         <AppProvider>
           {(isLoggedIn) =>
             isLoggedIn ? (
-              <Layout>
+              <PrivateLayout>
                 <PrivateRoutes />
-              </Layout>
+              </PrivateLayout>
             ) : (
-              <React.Suspense fallback={null}>
+              <PublicLayout>
                 <PublicRoutes />
-              </React.Suspense>
+              </PublicLayout>
             )
           }
         </AppProvider>

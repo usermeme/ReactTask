@@ -1,14 +1,12 @@
-import * as React from 'react';
 import { ThemeProvider as StyleComponentThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from 'configs/theme';
 import { THEME_STORAGE_NAME } from 'constants/localStorage';
 import { DARK, LIGHT } from 'constants/theme';
+import { useLocalStorage } from 'hooks';
 import { ThemeContext } from './duck';
 
 const ThemeProvider = ({ children }) => {
-  const [themeName, setThemeName] = React.useState(
-    () => localStorage.getItem(THEME_STORAGE_NAME) || LIGHT,
-  );
+  const [themeName, setThemeName] = useLocalStorage(THEME_STORAGE_NAME, LIGHT);
   const currentTheme = { [LIGHT]: lightTheme, [DARK]: darkTheme }[themeName];
 
   return (
