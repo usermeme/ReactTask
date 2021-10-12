@@ -54,3 +54,18 @@ export interface Weather {
   pressure: number;
   visibility: number;
 }
+
+export type Coordinates = Pick<
+  GeolocationCoordinates,
+  'latitude' | 'longitude'
+>;
+
+export interface Location {
+  id: number;
+  name: string;
+  country: string;
+  timezone: string;
+  adminArea: string;
+  lon: number;
+  lat: number;
+}

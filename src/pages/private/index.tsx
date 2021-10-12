@@ -1,9 +1,12 @@
+import * as React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { routes } from 'configs';
 
-const PrivateRoutes = () => (
+const Home = React.lazy(() => import('./home'));
+
+const PrivateRoutes: React.FC = () => (
   <Switch>
-    {/* <Route component={null} path={routes.home} exact /> */}
+    <Route component={Home} path={routes.home} exact />
     <Redirect to={routes.home} />
   </Switch>
 );

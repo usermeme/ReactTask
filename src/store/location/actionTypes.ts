@@ -1,0 +1,4 @@
+const PREFIX = 'LOCATION';
+
+export const SET_LOADING = `${PREFIX}/SET_LOADING`;
+export const SET_LOCATIONS = `${PREFIX}/SET_LOCATIONS`;
