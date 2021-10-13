@@ -3,7 +3,6 @@ import { NavLink } from 'components';
 
 export const Header = styled('header')`
   width: 100%;
-  padding: ${(props) => props.theme.spacing(4)} 0;
   background-color: ${(props) => props.theme.palette.primary.dark};
   box-shadow: ${(props) => props.theme.shape.boxShadow};
   margin: 0;

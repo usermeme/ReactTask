@@ -10,4 +10,5 @@ module.exports = {
   cssFolder: 'css',
   jsFolder: 'js',
   weatherApiPath: 'https://pfa.foreca.com/',
+  weatherStaticPath: 'https://developer.foreca.com/',
 };

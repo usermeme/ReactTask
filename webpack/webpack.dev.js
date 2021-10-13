@@ -46,6 +46,10 @@ module.exports = {
         target: commonPaths.weatherApiPath,
         secure: false,
       },
+      '/static': {
+        target: commonPaths.weatherStaticPath,
+        changeOrigin: true,
+      },
     },
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],

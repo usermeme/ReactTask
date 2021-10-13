@@ -1,6 +1,8 @@
 import * as React from 'react';
-import * as S from './styles';
+import * as Components from 'components';
 
-const Main: React.FC = ({ children }) => <S.Main as="main">{children}</S.Main>;
+const Main: React.FC = ({ children }) => (
+  <Components.Grid.Container as="main">{children}</Components.Grid.Container>
+);
 
 export default Main;

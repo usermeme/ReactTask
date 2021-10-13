@@ -16,7 +16,7 @@ i18n
     fallbackLng: 'en',
     supportedLngs: ['en'],
     keySeparator: false,
-    ns: ['login', 'common'],
+    ns: ['login', 'common', 'weather'],
     defaultNS: 'common',
     updateMissing: true,
     interpolation: { escapeValue: false },

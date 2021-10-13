@@ -1,0 +1,15 @@
+{
+  "weather_details": "Weather details",
+  "real_feel": "Real feel",
+  "rel_humidity": "Relative humidity",
+  "wind": "Wind",
+  "wind_gust": "Wind gust",
+  "dew_point": "Dew point",
+  "precip_prob": "Probability of precipitation",
+  "precip_pate": "Intensity of precipitation rate",
+  "cloudiness": "Cloudiness",
+  "thunder_prob": "Probability of thunder nearby",
+  "uv_index": "UV index",
+  "pressure": "Atmospheric pressure normalized to sea level",
+  "visibility": "Visibility"
+}

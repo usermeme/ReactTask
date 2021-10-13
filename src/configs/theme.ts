@@ -62,7 +62,7 @@ export const lightTheme: DefaultTheme = {
   palette: {
     ...globalTheme.palette,
     text: { primary: '#212121', secondary: '#757575' },
-    background: { main: '#FAFAFA', light: '#FFFFFF' },
+    background: { main: '#FAFAFA', light: '#FFFFFF', dark: '#000000' },
   },
 };
 
@@ -71,7 +71,7 @@ export const darkTheme: DefaultTheme = {
   palette: {
     ...globalTheme.palette,
     text: { primary: '#E0E0E0', secondary: '#757575' },
-    background: { main: '#424242', light: '#616161' },
+    background: { main: '#424242', light: '#616161', dark: '#000000' },
   },
 };
 

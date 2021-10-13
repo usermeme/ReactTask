@@ -8,10 +8,8 @@ export interface TokenData {
   token_type: TokenType;
 }
 
-export type Color = `#${string}`;
-
 export type PaletteItem = Partial<
-  Record<'main' | 'contrastText' | 'dark' | 'light', Color>
+  Record<'main' | 'contrastText' | 'dark' | 'light', string>
 >;
 
 export interface HeaderLink {

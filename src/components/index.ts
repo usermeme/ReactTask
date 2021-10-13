@@ -9,6 +9,7 @@ export { default as ThemeSwitcher } from './theme-switcher';
 export { default as Button } from './button';
 export { default as List } from './list';
 export { default as Weather } from './weather';
+export { default as WeatherIcon } from './weather-icon';
 
 export * from './inputs';
 export * from './controllers';
