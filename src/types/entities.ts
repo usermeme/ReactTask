@@ -1,6 +1,6 @@
 import { routes } from 'configs';
 import { ObjectValues } from './utils';
-import { TokenType } from './enums';
+import { TokenType, WindDirection } from './enums';
 
 export interface TokenData {
   access_token: string;
@@ -20,4 +20,37 @@ export interface HeaderLink {
   text: string;
   title: string;
   descendants?: ObjectValues<typeof routes>[];
+}
+
+export interface Forecast {
+  time: Date;
+  symbol: string;
+  temperature: number;
+  feelsLikeTemp: number;
+  windDir: number;
+  windGust: number;
+  windSpeed: number;
+  windDirString: WindDirection;
+  precipProb: number;
+  precipRate: number;
+}
+
+export interface Weather {
+  time: Date;
+  symbol: string;
+  symbolPhrase: string;
+  temperature: number;
+  feelsLikeTemp: number;
+  relHumidity: number;
+  dewPoint: number;
+  windSpeed: number;
+  windDirString: WindDirection;
+  windGust: number;
+  precipProb: number;
+  precipRate: number;
+  cloudiness: number;
+  thunderProb: number;
+  uvIndex: number;
+  pressure: number;
+  visibility: number;
 }
